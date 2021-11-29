@@ -18,6 +18,8 @@ class CarsAdapter(private val cars: List<Car>, private val onCarClick: (Int) -> 
         holder.carType.text = cars[position].name
         holder.carLocation.text = cars[position].location
         holder.price.text = cars[position].price
+
+        holder.bind(cars[position],onCarClick)
     }
 
     override fun getItemCount(): Int {

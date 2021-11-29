@@ -11,4 +11,9 @@ class CarsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val carType:TextView = itemView.findViewById(R.id.carTypeTxt)
     val carLocation:TextView =itemView.findViewById(R.id.locationText)
     val price:TextView=itemView.findViewById(R.id.priceTxt)
+
+    fun bind(car:Car,onCarClick:(Int)->Unit){
+        itemView.setOnClickListener{onCarClick(car.id)}
+    }
+
 }
