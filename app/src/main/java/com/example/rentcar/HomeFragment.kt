@@ -23,7 +23,10 @@ class HomeFragment : Fragment() {
         val navHostFragment=childFragmentManager.findFragmentById(R.id.fragment) as NavHostFragment
         view.findViewById<BottomNavigationView>(R.id.bottomNavigationView).setupWithNavController(  navController = navHostFragment.navController)
 
-//        val toolbar =view.findViewById<Toolbar>(R.id.toolbar)
+//        navHostFragment.navController.addOnDestinationChangedListener(_,destination ->
+//        toolbar.title=destination.)
+
+
         return view
     }
 
