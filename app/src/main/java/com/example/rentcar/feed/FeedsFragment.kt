@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rentcar.HomeFragmentDirections
@@ -26,8 +27,9 @@ class FeedsFragment : Fragment() {
         return view
     }
 
-    private fun onCarClick(carId:Int){
-
+    private fun onCarClick(carId: Int) {
+        val action = HomeFragmentDirections.actionHomeFragmentToCarFragment(carId)
+        activity?.findNavController(R.id.nav_container)?.navigate(action)
     }
 
 }
