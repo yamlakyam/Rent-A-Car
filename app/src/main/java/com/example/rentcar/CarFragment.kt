@@ -18,7 +18,7 @@ class CarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val id = CarFragmentArgs.fromBundle(requireArguments()).id
+        val id = CarFragmentArgs.fromBundle(requireArguments()).id -1
         val car = CARS.get(id)
 
 
