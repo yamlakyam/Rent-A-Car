@@ -5,7 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rentcar.R
 
-class CarsAdapter(private val cars: List<Car>) : RecyclerView.Adapter<CarsViewHolder>() {
+class CarsAdapter(private val cars: List<Car>, private val onCarClick: (Int) -> Unit) :
+    RecyclerView.Adapter<CarsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarsViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_car, parent, false)
 

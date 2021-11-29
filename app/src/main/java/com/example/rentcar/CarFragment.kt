@@ -18,8 +18,10 @@ class CarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val id = CarFragmentArgs.fromBundle(arguments).id
+        val id = CarFragmentArgs.fromBundle(requireArguments()).id
         val car = CARS.get(id)
+
+
 
         val view = inflater.inflate(R.layout.fragment_car, container, false)
         view.findViewById<TextView>(R.id.carName).text = car.name

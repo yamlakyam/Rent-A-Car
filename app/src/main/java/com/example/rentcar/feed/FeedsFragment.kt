@@ -21,7 +21,7 @@ class FeedsFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_feeds, container, false)
         val recyclerView = view.findViewById<RecyclerView>(R.id.feedRV)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        val adapter = CarsAdapter(CARS)
+        val adapter = CarsAdapter(CARS, ::onCarClick)
         recyclerView.adapter = adapter
 
         return view
