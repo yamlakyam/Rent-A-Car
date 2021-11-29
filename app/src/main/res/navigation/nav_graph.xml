@@ -32,5 +32,18 @@
         android:id="@+id/homeFragment"
         android:name="com.example.rentcar.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_carFragment"
+            app:destination="@id/carFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carFragment"
+        android:name="com.example.rentcar.CarFragment"
+        android:label="fragment_car"
+        tools:layout="@layout/fragment_car" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.rentcar.HomeFragmentDirections
 import com.example.rentcar.R
 
 class FeedsFragment : Fragment() {
@@ -23,6 +24,10 @@ class FeedsFragment : Fragment() {
         recyclerView.adapter = adapter
 
         return view
+    }
+
+    private fun onCarClick(carId:Int){
+
     }
 
 }
