@@ -19,6 +19,9 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/wlelcomeFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_wlelcomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
